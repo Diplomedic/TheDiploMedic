@@ -1,0 +1,49 @@
+
+/* Base styling for The DiploMedic */
+body {
+  font-family: 'Lato', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f7f5f0;
+  color: #1a1a1a;
+}
+
+header {
+  background-color: #f5d547;
+  color: #1a1a1a;
+  padding: 20px;
+  text-align: center;
+}
+
+nav {
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 10px 0;
+  border-bottom: 1px solid #ccc;
+}
+
+nav a {
+  text-decoration: none;
+  color: #1a1a1a;
+  font-weight: bold;
+}
+
+nav a:hover {
+  border-bottom: 2px solid #1a1a1a;
+}
+
+main {
+  padding: 40px 20px;
+  max-width: 960px;
+  margin: auto;
+}
+
+footer {
+  background-color: #eee;
+  color: #555;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9em;
+}

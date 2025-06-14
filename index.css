@@ -1,0 +1,159 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Lato:wght@300;400;600;700&display=swap');
+
+:root {
+  --background: hsl(0, 0%, 100%);
+  --foreground: hsl(0, 0%, 0%);
+  --muted: hsl(60, 4.8%, 95.9%);
+  --muted-foreground: hsl(25, 5.3%, 44.7%);
+  --popover: hsl(0, 0%, 100%);
+  --popover-foreground: hsl(0, 0%, 0%);
+  --card: hsl(0, 0%, 100%);
+  --card-foreground: hsl(0, 0%, 0%);
+  --border: hsl(20, 5.9%, 90%);
+  --input: hsl(20, 5.9%, 90%);
+  --primary: hsl(51, 100%, 50%);
+  --primary-foreground: hsl(0, 0%, 0%);
+  --secondary: hsl(60, 100%, 97%);
+  --secondary-foreground: hsl(0, 0%, 0%);
+  --accent: hsl(60, 100%, 97%);
+  --accent-foreground: hsl(0, 0%, 0%);
+  --destructive: hsl(0, 84.2%, 60.2%);
+  --destructive-foreground: hsl(60, 9.1%, 97.8%);
+  --ring: hsl(0, 0%, 0%);
+  --radius: 0.5rem;
+  
+  /* Custom DiploMedic colors */
+  --diplo-yellow: hsl(51, 100%, 50%);
+  --diplo-white: hsl(0, 0%, 100%);
+  --diplo-black: hsl(0, 0%, 0%);
+  --diplo-beige: hsl(60, 100%, 97%);
+}
+
+.dark {
+  --background: hsl(240, 10%, 3.9%);
+  --foreground: hsl(0, 0%, 98%);
+  --muted: hsl(240, 3.7%, 15.9%);
+  --muted-foreground: hsl(240, 5%, 64.9%);
+  --popover: hsl(240, 10%, 3.9%);
+  --popover-foreground: hsl(0, 0%, 98%);
+  --card: hsl(240, 10%, 3.9%);
+  --card-foreground: hsl(0, 0%, 98%);
+  --border: hsl(240, 3.7%, 15.9%);
+  --input: hsl(240, 3.7%, 15.9%);
+  --primary: hsl(51, 100%, 50%);
+  --primary-foreground: hsl(0, 0%, 0%);
+  --secondary: hsl(240, 3.7%, 15.9%);
+  --secondary-foreground: hsl(0, 0%, 98%);
+  --accent: hsl(240, 3.7%, 15.9%);
+  --accent-foreground: hsl(0, 0%, 98%);
+  --destructive: hsl(0, 62.8%, 30.6%);
+  --destructive-foreground: hsl(0, 0%, 98%);
+  --ring: hsl(240, 4.9%, 83.9%);
+  --radius: 0.5rem;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+    font-family: 'Lato', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+  }
+}
+
+@layer utilities {
+  .font-playfair {
+    font-family: 'Playfair Display', serif;
+  }
+  
+  .font-lato {
+    font-family: 'Lato', sans-serif;
+  }
+  
+  .bg-diplo-yellow {
+    background-color: var(--diplo-yellow);
+  }
+  
+  .bg-diplo-white {
+    background-color: var(--diplo-white);
+  }
+  
+  .bg-diplo-black {
+    background-color: var(--diplo-black);
+  }
+  
+  .bg-diplo-beige {
+    background-color: var(--diplo-beige);
+  }
+  
+  .text-diplo-yellow {
+    color: var(--diplo-yellow);
+  }
+  
+  .text-diplo-white {
+    color: var(--diplo-white);
+  }
+  
+  .text-diplo-black {
+    color: var(--diplo-black);
+  }
+  
+  .border-diplo-yellow {
+    border-color: var(--diplo-yellow);
+  }
+  
+  .hover\:bg-diplo-yellow:hover {
+    background-color: var(--diplo-yellow);
+  }
+  
+  .hover\:text-diplo-yellow:hover {
+    color: var(--diplo-yellow);
+  }
+}
+
+/* Custom animations and transitions */
+.nav-link {
+  transition: all 0.2s ease;
+}
+
+.content-tile {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.content-tile:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(60, 100%, 97%);
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(51, 100%, 50%);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(51, 100%, 45%);
+}
